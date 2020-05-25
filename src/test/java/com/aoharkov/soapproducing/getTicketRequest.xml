@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:tns="http://soapproducing.aoharkov.com"
+                  targetNamespace="http://soapproducing.aoharkov.com">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tns:getTicketRequest>
+            <tns:id>1</tns:id>
+        </tns:getTicketRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
