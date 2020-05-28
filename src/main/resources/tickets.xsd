@@ -1,0 +1,47 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://soapproducing.aoharkov.com"
+           elementFormDefault="qualified"
+           targetNamespace="http://soapproducing.aoharkov.com">
+
+    <xs:element name="getTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" type="tns:ticket"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="saveTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" type="tns:ticket"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="saveTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="ticket">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="titleOfEvent" type="xs:string"/>
+            <xs:element name="fullNameOfAttendee" type="xs:string"/>
+            <xs:element name="row" type="xs:int"/>
+            <xs:element name="seat" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
